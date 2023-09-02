@@ -1,11 +1,11 @@
 import { useRef } from "react";
 
 type SearchProps = {
-	setQuery: (query: string | undefined) => void;
+	setQuery: (query: string | null) => void;
 };
 
 function Search({ setQuery }: SearchProps) {
-	const inputRef = useRef<string>();
+	const inputRef = useRef<string | null>(null);
 
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>): void => {
 		e.preventDefault();
@@ -21,7 +21,6 @@ function Search({ setQuery }: SearchProps) {
 				onChange={(e) => {
 					inputRef.current = e.target.value;
 				}}
-				value={inputRef.current}
 			/>
 		</form>
 	);

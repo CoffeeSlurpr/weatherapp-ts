@@ -4,7 +4,7 @@ import Weather from "./Weather";
 
 const baseUrl = "https://api.openweathermap.org/data/2.5";
 
-export const fetchWeather = async (city: string): Promise<Weather | undefined> => {
+export const fetchWeather = async (city: string | undefined): Promise<Weather | undefined> => {
 	try {
 		const response = await axios.get<Weather>(`${baseUrl}/weather`, {
 			params: {
@@ -19,7 +19,7 @@ export const fetchWeather = async (city: string): Promise<Weather | undefined> =
 	}
 };
 
-export const fetchForecast = async (city: string): Promise<Forecast | undefined> => {
+export const fetchForecast = async (city: string | undefined): Promise<Forecast | undefined> => {
 	try {
 		const response = await axios.get<Forecast>(`${baseUrl}/forecast`, {
 			params: {

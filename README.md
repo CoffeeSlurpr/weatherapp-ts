@@ -15,8 +15,7 @@ This app uses publicly available data via [OpenWeather](https://openweathermap.o
 ## Tech Stack
 
 - React + Typescript + Vite
-- Tanstack Query
-- SCSS
+- Tailwind
 
 ## Installation
 
